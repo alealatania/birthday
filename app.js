@@ -24,7 +24,7 @@
     if (opening) return;
     opening = true;
     $('#page1').classList.add('page1-opening');
-    setTimeout(() => { page(2); opening = false; }, 1550);
+    setTimeout(() => { page(2); opening = false; }, 2080);
   });
   $('#toRsvp').addEventListener('click', () => page(3));
   const snow = $('#snow');
