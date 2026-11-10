@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="theme-color" content="#071e4d">
+<title>A Royal Invitation — Alea's Fourth Birthday</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head><body>
+<main class="frame" id="invitation">
+  <section class="page active" id="page1" aria-label="Royal entrance">
+    <img class="art" src="assets/page1.png" alt="An icy castle and magical royal invitation">
+    <div class="portal" aria-hidden="true"></div><div class="door-wing door-left" aria-hidden="true"></div><div class="door-wing door-right" aria-hidden="true"></div>
+    <div class="flash" aria-hidden="true"></div>
+    <button class="full-tap" id="open" aria-label="Tap to open the royal invitation"></button>
+  </section>
+  <section class="page" id="page2" aria-label="Personal birthday invitation">
+    <img class="art" src="assets/page2.png" alt="Icy crystal scroll with Alea's birthday invitation at Pororo Park PIM 1 Street Gallery, 10.00 to 13.00">
+    <div class="guest-name" id="guestName">Dear Guest,</div>
+    <div class="date-label">28 Nov 2026</div>
+    <button class="hit invitation-cta" id="toRsvp" aria-label="Click for RSVP"></button>
+  </section>
+  <section class="page" id="page3" aria-label="RSVP form">
+    <img class="art" src="assets/page3.png" alt="Icy crystal RSVP scroll with attendance and adult count options">
+    <form id="rsvpForm" autocomplete="off">
+      <fieldset class="choice-row attend-row" aria-label="Attendance">
+        <legend class="sr-only">Attendance</legend>
+        <label class="hit option"><input type="radio" name="attendance" value="Yes" required aria-label="Yes"><span></span></label>
+        <label class="hit option"><input type="radio" name="attendance" value="No" aria-label="No"><span></span></label>
+        <label class="hit option"><input type="radio" name="attendance" value="Maybe" aria-label="Maybe"><span></span></label>
+      </fieldset>
+      <fieldset class="choice-row adults-row" aria-label="Number of adults">
+        <legend class="sr-only">Number of adults attending</legend>
+        <label class="hit option"><input type="radio" name="adults" value="1" required aria-label="1 adult"><span></span></label>
+        <label class="hit option"><input type="radio" name="adults" value="2" aria-label="2 adults"><span></span></label>
+      </fieldset>
+      <button class="hit submit-cta" type="submit" aria-label="Submit RSVP"></button>
+    </form>
+    <p id="feedback" class="feedback" role="status" aria-live="polite"></p>
+  </section>
+  <div class="snow" id="snow" aria-hidden="true"></div>
+  <div id="confirmation" class="confirmation" role="dialog" aria-modal="true" aria-labelledby="thankTitle" hidden>
+     <div class="confirmation-content"><div class="flurry">✧ ❄ ✧</div><h2 id="thankTitle">Your Royal Reply Is Sent!</h2><p id="thankBody">Thank you for your RSVP.</p><button id="closeConfirmation">Close</button></div>
+  </div>
+</main>
+<script src="config.js"></script><script src="app.js"></script>
+</body></html>
