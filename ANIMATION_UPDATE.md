@@ -1,7 +1,14 @@
-# Cinematic door transition update
+# Real hinged castle doors — v4
 
-Page 1 now zooms toward the **existing full-size doors**, which open after the zoom, followed by a white/ice-blue dissolve revealing Page 2. No smaller second pair of doors appears. All three artworks, RSVP HTML, guest lookups, and Google Apps Script are otherwise unchanged.
+Updated the previously sliding door animation. The approved Page 1/2/3 illustrations remain unchanged.
 
-To update an already-working GitHub Pages site, upload **index.html**, **styles.css**, and **app.js** from this ZIP and overwrite the existing files. The full package is also provided in case you prefer replacing everything. Since your `config.js` is working, keep your existing live `config.js` unchanged. We also removed the duplicate HTML date overlay; the date remains printed on the Page 2 image.
+- After tapping, the camera zooms toward the original painted doorway.
+- Full-size door halves cut from the original Page 1 image rotate in 3D around their outer hinges (no translateX).
+- A subtle light emerges from behind the doors, then dissolves to Page 2.
+- Guest-name lookup, date in Page 2 artwork, and Google Sheets RSVP code remain unchanged.
 
-After committing, refresh the invitation (a private window works well). No need to re-deploy Apps Script, regenerate guest links, or change the Google Sheet.
+## Upload to GitHub
+
+Upload all contents of this ZIP to the repository root. The package is complete, including existing config and sheet script. Your Apps Script deployment does not need updating.
+
+If using the patch instead of the full ZIP, replace `index.html`, `styles.css`, `app.js`, and add `assets/door-left.png` plus `assets/door-right.png`.
